@@ -1,0 +1,144 @@
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.detail-image {
+  background: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  position: sticky;
+  top: 100px;
+}
+
+.detail-image img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.detail-image:hover img {
+  transform: scale(1.05);
+}
+
+.detail-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.detail-meta {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.detail-meta .rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.stock-label {
+    background: #e6f7ff;
+    color: #03a9f4;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.detail-price {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.detail-price .current {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.detail-price .mrp {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.detail-price .off {
+    color: var(--success-color);
+    font-weight: 700;
+}
+
+.description {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+.order-options {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.qty-picker {
+    display: flex;
+    align-items: center;
+    background: var(--surface-color);
+    border: 1px solid #eee;
+    border-radius: 30px;
+    padding: 0.4rem;
+}
+
+.qty-picker button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #ddd;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.qty-picker span {
+    padding: 0 1.5rem;
+    font-weight: 700;
+}
+
+.buy-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.trust-badges {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+}
+
+.badge-item p {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    color: var(--text-secondary);
+}
+@media (max-width: 900px) {
+  .detail-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .detail-image { position: relative; top: 0; }
+}

@@ -1,0 +1,132 @@
+.home-page {
+  padding-bottom: 5rem;
+}
+
+.banner-section {
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+}
+
+.banner-container {
+  height: 100%;
+}
+
+.banner-slide {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+}
+
+.banner-content {
+  color: #333;
+  padding: 3rem;
+  max-width: 600px;
+}
+
+.banner-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  color: var(--primary-color);
+}
+
+.banner-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.banner-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  color: #333;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+}
+
+.banner-nav.prev { left: 20px; }
+.banner-nav.next { right: 20px; }
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.view-all {
+  color: var(--primary-color);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.category-item {
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.category-image {
+  background: #fff;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+  border: 1px solid #eee;
+  padding: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.category-item:hover .category-image {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+.category-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.category-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.p-y-5 { padding-top: 3rem; padding-bottom: 3rem; }
+.p-t-5 { padding-top: 3rem; }
