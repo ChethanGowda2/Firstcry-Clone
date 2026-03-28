@@ -19,7 +19,7 @@ def create_app():
 
     db.init_app(app)
     jwt.init_app(app)
-    CORS(app)
+    CORS(app, origins=[os.getenv('FRONTEND_URL', 'http://localhost:5173')])
 
     # Import and register blueprints
     from routes.auth_routes import auth_bp
